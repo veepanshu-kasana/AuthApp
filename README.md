@@ -43,6 +43,20 @@ export default defineConfig([
 ])
 ```
 
+## UI (shadcn) conversion
+
+This project is in the process of converting UI components to follow the shadcn conventions.
+
+- A `tailwind.config.cjs` was added mapping theme tokens to CSS variables used by the components.
+- Core components (`Button`, `Input`, `Card`, `Label`) use `class-variance-authority` and are exported from `src/components/ui`.
+- The project currently uses Tailwind v4. To run the official `shadcn` generator you may need to upgrade Tailwind to v3+ or adapt the generator output.
+
+Next steps to fully adopt shadcn:
+
+1. Upgrade Tailwind to v3+ (recommended) or adapt generator output to v4.
+2. Optionally run the `shadcn` component generator to scaffold additional components.
+3. Add shadcn-specific plugins if needed and run a quick visual QA pass.
+
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js
